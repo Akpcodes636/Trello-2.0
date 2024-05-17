@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backgroundImage {
+    background-image: url(./img/blue-underline.svg);
+    background-repeat: no-repeat;  
+}
+
+.sample {
+     font-size:  clamp(2.2rem, 5vw, 7rem);
+}
+.underline-blue::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    bottom: 0;
+    background: url(/blue-underline.svg) no-repeat 0 0;
+    background-size: 100% auto;
+}
+.blue {
+    outline-color: #0083FF;
+}
+.blue-color{
+    color: #0074e0;
+}
+.text-gray {
+    color:#737373;
+}
+.background{
+    background-color: #f6f6f6;
+}
+._1kdpkci6 {
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, .08);
+}
+.height{
+    height: 82px;
+    padding-inline: 36px;
+    font-size: 36px;
+}
+.height-small {
+    padding-inline:36px;
+    height: 62px;
+}
+.backgroundImage-500 {
+    background-image: url(./img/Phone-page.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 63% auto;
+}
+.backgroundImage-600 {
+    background-image: url(./img/calender.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 63% auto;
+}
+.backgroundImage-700 {
+    background-image: url(./img/call\ Up.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 80% auto;
+}
+.backgroundImage-900 {
+    background-image: url(./img/Organized.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 68%;
+}
+.backgroundImage-1000 {
+    background-image: url(./img/Call-Mom.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+.backgroundImage-1100 {
+    background-image: url(./img/family-closeUp.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+.backgroundImage-1200 {
+    background-image: url(./img/Grocies\ List.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+.backgroundImage-1300 {
+    background-image: url(./img/feature-family-household-projects.6a48d831.webp);
+    background-repeat: no-repeat;
+    background-position: center 77%;
+    background-size:45% auto;
+}
+.backgroundImage-1400 {
+    background-image: url(./img/DogF.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:80% auto;
+}
+.backgroundImage-1500 {
+    background-image: url(./img/Features.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+.backgroundImage-1600 {
+    background-image: url(./img/Teams.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+.backgroundImage-1700 {
+    background-image: url(./img/Kanban.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+}
+._q12345 {
+    height: calc((100vh - 128px) - 142px);
+    border-radius: 52px;
+}
+
+._1kdpkcia {
+    text-align: center;
+    font-size: clamp(1rem,4vh,144px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1.422px;
+    padding-top: 1.1em;
+    margin-bottom: 4px;
+}
+._1kdpkcib {
+    color: #9b9b9b;
+    text-align: center;
+    font-size: clamp(1rem,2.8vh,96px);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -.075px;
+}
+.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, .08);
+}
+
+.activeEl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, .08);
+}
+
+/* #navbar {
+position: fixed;
+top: 0px;
+}; */
+
+._1kdpkci2 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    /* background: linear-gradient(180deg, #fff 50%, hsla(0, 0%, 100%, 0)); */
+    background-color: blue;
+}
+._1kdpkci3 {
+    width: -moz-min-content;
+    width: min-content;
+    margin-inline: auto;
+    height: 82px;
+    background: red;
+    border-radius: 9999px;
+    display: flex;
+    font-size: 36px;
+    gap: 96px;
+    padding-inline: 36px;
+}
+.your-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 80%; /* 80% and 1 fraction (20%) */
+    /* Add other grid properties as needed */
+}
+.color {
+    color: #44546F;
+}
+.color-background {
+    color:#44546F
+}

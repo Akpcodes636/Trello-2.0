@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boards || Trello</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+   <header>
+    <nav class="flex items-center justify-between w-full border-b-2 border-slate-50">
+        <div class="flex items-center justify-between space-x-8 p-4">
+            <div class="flex items-center justify-center">
+                <ion-icon name="apps-outline"></ion-icon>
+                <span class="textblue-600 text-xl font-bold">Trello.</span>
+            </div>
+            <div>
+                <ul class="flex items-center justify-center md:gap-6">
+                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">WorkSpaces<ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">Recent<ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">Starred<ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href="" class="flex items-center hover:text-slate-600 cursor-pointer">More<ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-microsoft"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <ul class="flex items-center justify-between gap-3">
+                 <div class=" hidden lg:flex lg:items-center lg:justify-between px-3 gap-1 py-1 rounded-md border border-slate-950">
+                    <ion-icon name="search-outline"></ion-icon><span></span>
+                    <input type="search" placeholder="Search" class="bg-transparent outline-none">
+                 </div>
+                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="notifications-outline" size="large"></ion-icon>
+                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="help-circle-outline" size="large"></ion-icon>
+                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="people-circle-outline" size="large"></ion-icon>
+            </ul>
+        </div>
+    </nav>
+   </header>
+   <main>
+    <section class="md:grid md:grid-cols-[1fr_80%] container mx-auto max-w-ful px-2 my-10">
+     <div class="p-2 hidden md:block">
+        <div class="border-b-2 border-slate-50">
+            <div class="px-6 py-2 rounded-md bg-blue-200">
+               <span class="flex items-center gap-3"><ion-icon name="bar-chart-outline"></ion-icon>Boards</span>
+            </div>
+            <div class="px-6 py-2 rounded-md">
+               <span class="flex items-center gap-3"><ion-icon name="podium-outline"></ion-icon>Templates</span>
+            </div>
+            <div class="px-6 py-2 rounded-md">
+               <span class="flex items-center gap-3"><ion-icon name="pulse-outline"></ion-icon>Home</span>
+            </div>
+        </div>
+        <p class="py-3 text-sm px-7">Workspaces</p>
+        <button><span id="modalButton" class="flex items-center gap-3 text-xm font-light"><ion-icon name="add-outline"></ion-icon>create workspace</span></button>
+        <!-- <div class="flex items-center flex-wrap w-full">
+            <div class="flex items-center justify-between p-1 w-full rounded-sm cursor-pointer hover:bg-slate-100">
+                <h1 class="flex items-center gap-1 text-sm font-normal"><span class=""><ion-icon name="logo-apple-ar" class="bg-orange-500 p-1"></ion-icon></span>Akpesiri Build</h1>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="w-full">
+                <span class="p-2 rounded-md flex items-center justify-center text-sm gap-2"><ion-icon name="bar-chart-outline"></ion-icon>Board</span>
+                <span class="p-2 rounded-md flex items-center justify-center text-sm gap-2"><ion-icon name="grid-outline"></ion-icon>Views</span>
+                <span class="p-2 rounded-md flex items-center justify-center text-sm gap-2"><ion-icon name="person-outline"></ion-icon>Member(1)</span>
+                <span class="p-2 rounded-md flex items-center justify-center text-sm gap-2"><ion-icon name="cog-outline"></ion-icon>Settings</span>
+                <span class="p-2 rounded-md flex items-center justify-center text-sm gap-2"><ion-icon name="medkit-outline"></ion-icon>Upgrade</span> 
+            </div>
+        </div> -->
+
+     </div>
+     <div class="px-4 md:px-8 py-6">
+      <h1 class="uppercase font-medium color">Your Workspaces</h1>
+      <p class="py-6">You aren't a member of any workspaces yet. <a href="#" class="text-blue-500">Create a workspace</a></p>
+      <!-- <div class="flex flex-col md:flex-row md:items-center md:justify-between md:gap-10">
+        <div>
+            <h1 class="flex items-center gap-3 text-xl md:text-base font-medium"><span class=""><ion-icon name="logo-apple-ar" class="bg-orange-500 p-2"></ion-icon></span>Akpesiri Build</h1>
+    
+        </div>
+         <div class="grid grid-cols-2 md:flex md:items-center md:justify-between gap-2 my-4">
+         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="bar-chart-outline"></ion-icon>Board</span>
+         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="grid-outline"></ion-icon>Views</span>
+         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="person-outline"></ion-icon>Member(1)</span>
+         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="cog-outline"></ion-icon>Settings</span>
+         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="medkit-outline"></ion-icon>Upgrade</span>
+         </div>
+       
+      </div> -->
+      <!-- Pop up Modal -->
+
+
+<!-- Modal toggle -->
+<div id="modalBox" class="py-24 fixed top-0 bottom-0 right-0 left-0 backdrop-blur-lg mx-auto hidden">
+    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+      <div class="hidden lg:block lg:w-1/2 bg-cover" style="background-image:url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')"></div>
+      <div class="w-full p-8 lg:w-1/2">
+        <div class="flex items-center justify-end">
+            <button type="button" id="removeBtn" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                             <span class="absolute -inset-0.5"></span>
+                             <span class="sr-only">Close panel</span>
+                             <svg  class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                             </svg>
+             </button>
+             </div>
+              <h2 class="text-2xl font-semibold text-gray-700 text-center">Let's build a Workspace</h2>
+              <p class="text-sm text-center text-gray-600  mb-2">Boost your productivity using trello.</p>
+              <!-- <a href="#" class="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100 g-signin2" data-onsuccess="onSignIn">
+                  <div class="px-4 py-3">
+                      <svg class="h-6 w-6" viewBox="0 0 40 40">
+                          <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107"/>
+                          <path d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z" fill="#FF3D00"/>
+                          <path d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z" fill="#4CAF50"/>
+                          <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2"/>
+                      </svg> 
+                  </div>
+                  <h1 class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
+                </a> -->
+                
+                <div class="g-signin2" data-onsuccess="onSignIn"
+                  data-client_id="475660581860-f34l5cr1mg8e7fjlp0r0ko7jjuk974db"  data-context="signin"
+                  data-ux_mode="popup"
+                  data-login_uri="http://localhost:5500"
+                  data-itp_support="true"
+                  data-type="standard"
+                  data-shape="rectangular"
+                  data-theme="outline"
+                  data-text="signin_with"
+                  data-size="large"
+                  data-logo_alignment="center"
+                  data-width="400px">
+                </div> 
+                <form class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-2 grid-cols-2">
+                        <div class="col-span-2">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace name</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+                        </div>  
+        
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace type</label>
+                            <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full py-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option selected="">Choose...</option>
+                                <option value="TV">Operations</option>
+                                <option value="PC">Engineering-IT</option>
+                                <option value="GA">Small Business</option>
+                                <option value="PH">Sales</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
+                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Our team organizes everything here."></textarea>                    
+                        </div>
+                    </div>
+                    <button type="submit" class="text-white inline-flex w-full items-center justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                        Continue
+                    </button>
+                </form>
+          </div>
+      </div>
+  </div>
+
+      <div  class="bg-slate-100 w-1/2 md:w-1/4 h-24 rounded-sm cursor-pointer flex items-center justify-center md:flex ">
+        <p>Create new board</p>
+     </div>
+     </div>
+    </section>
+   </main>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="./components.js"></script>
+</body>
+</html>
