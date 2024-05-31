@@ -24,7 +24,7 @@
 .blue {
     outline-color: #0083FF;
 }
-.blue-color{
+.blue-color {
     color: #0074e0;
 }
 .text-gray {
@@ -165,11 +165,6 @@
     box-shadow: 0 4px 36px 0 rgba(0, 0, 0, .08);
 }
 
-/* #navbar {
-position: fixed;
-top: 0px;
-}; */
-
 ._1kdpkci2 {
     position: sticky;
     top: 0;
@@ -202,3 +197,238 @@ top: 0px;
 .color-background {
     color:#44546F
 }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    background-color: #f3f3f3;
+    padding: 5rem 6rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+  }
+  
+  .modal__header {
+    font-size: 3.25rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.5;
+  }
+  
+  .modal__form {
+    margin: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .modal__form label {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  
+  .modal__form input {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+  }
+  
+  .modal__form button {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 1rem;
+  }
+.scrollbar{
+    scrollbar-width: none;
+}
+.background-img {
+    background-image: url(./img/josh-calabrese-XXpbdU_31Sg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes rotate-color {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @-webkit-keyframes rotate-color {
+    from {
+    -webkit-transform: rotate(0deg);
+    }
+    to {
+    -webkit-transform: rotate(360deg);
+    }
+    }
+    .animate-gradient {
+    animation: rotate-color 5s linear infinite;
+    -webkit-animation: rotate-color 5s linear infinite;
+    }
+
+    ion-icon-1 {
+        color: gree
+    }
+    .background-color{
+        background-color: #f4f4f4 !important;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+        width: 225px;
+        /* min-height: 128px; */
+        flex-shrink: 0;
+    }
+    /* .task {
+        background-color:white;
+        color: black;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: move;
+    } */
+    /* .is-dragging {
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgb(50, 50, 50);
+    color: white;
+    } */
+    *::-webkit-scrollbar{
+        display: none;
+    }
+
+    .welcome-message {
+        opacity: 0;  /* Initially hidden */
+        transform: translateY(20px); /* Initially moved down */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    .welcome-message.show {
+        opacity: 1;  /* Animate opacity on show class */
+        transform: translateY(0);  /* Animate back to original position */
+      }
+
+      @keyframes welcomeMessageAnimation {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      
+      .welcome-message {
+        animation: welcomeMessageAnimation 0.5s ease-in-out;
+      }
+
+
+.board {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+  
+    background-image: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* ---- FORM ---- */
+  #todo-form {
+    padding: 32px 32px 0;
+  }
+  
+  #todo-form input {
+    padding: 12px;
+    margin-right: 12px;
+    width: 225px;
+  
+    border-radius: 4px;
+    border: none;
+  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: white;
+  
+    font-size: 14px;
+    outline: none;
+  }
+  
+  #todo-form button {
+    padding: 12px 32px;
+  
+    border-radius: 4px;
+    border: none;
+  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    color: black;
+  
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* ---- BOARD ---- */
+  .lanes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 16px;
+  
+    padding: 24px 32px;
+  
+    overflow: scroll;
+    height: 100%;
+  }
+  
+  .heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .swim-lane {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+    background: #f4f4f4;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  
+    padding: 12px;
+    border-radius: 4px;
+    width: 225px;
+    min-height: 120px;
+  
+    flex-shrink: 0;
+  }
+  
+  .task {
+    background: white;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  
+    padding: 12px;
+    border-radius: 4px;
+  
+    font-size: 16px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .is-dragging {
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: rgb(50, 50, 50);
+    color: white;
+  }

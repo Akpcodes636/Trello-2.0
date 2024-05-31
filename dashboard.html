@@ -9,47 +9,291 @@
 </head>
 <body>
    <header>
-    <nav class="flex items-center justify-between w-full border-b-2 border-slate-50">
-        <div class="flex items-center justify-between space-x-8 p-4">
-            <div class="flex items-center justify-center">
-                <ion-icon name="apps-outline"></ion-icon>
-                <span class="textblue-600 text-xl font-bold">Trello.</span>
-            </div>
-            <div>
-                <ul class="flex items-center justify-center md:gap-6">
-                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">WorkSpaces<ion-icon name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">Recent<ion-icon name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href="" class="hidden md:flex items-center justify-center hover:text-slate-600 cursor-pointer transition-all">Starred<ion-icon name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href="" class="flex items-center hover:text-slate-600 cursor-pointer">More<ion-icon name="chevron-down-outline"></ion-icon></a></li>
-                    <li><a href=""><ion-icon name="logo-microsoft"></ion-icon></a></li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <ul class="flex items-center justify-between gap-3">
-                 <div class=" hidden lg:flex lg:items-center lg:justify-between px-3 gap-1 py-1 rounded-md border border-slate-950">
-                    <ion-icon name="search-outline"></ion-icon><span></span>
-                    <input type="search" placeholder="Search" class="bg-transparent outline-none">
-                 </div>
-                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="notifications-outline" size="large"></ion-icon>
-                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="help-circle-outline" size="large"></ion-icon>
-                <ion-icon class=" hover:text-slate-600 cursor-pointer transition-all" name="people-circle-outline" size="large"></ion-icon>
-            </ul>
-        </div>
-    </nav>
+   <!-- Main navigation container -->
+<nav
+class="flex-no-wrap hidden relative lg:flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-surface-dark lg:flex-wrap lg:justify-start lg:py-4">
+
+<div class="flex w-full flex-wrap items-center justify-between px-3">
+  <!-- Hamburger button for mobile view -->
+  <button id="btn"
+    class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+    type="button"
+    data-twe-collapse-init
+    data-twe-target="#navbarSupportedContent12"
+    aria-controls="navbarSupportedContent12"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <!-- Hamburger icon -->
+    <span
+      class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor">
+        <path
+          fill-rule="evenodd"
+          d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+          clip-rule="evenodd" />
+      </svg>
+    </span>
+  </button>
+  <!-- Collapsible navigation container -->
+  <div
+    class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+    id="navbarSupportedContent12"
+    data-twe-collapse-item>
+    <!-- Logo -->
+    <a
+      class="mb-4 me-5 ms-2 mt-3 flex items-center lg:mb-0 lg:mt-0"
+      href="#">
+      <img
+        src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
+        style="height: 15px"
+        alt="TE Logo"
+        loading="lazy" />
+    </a>
+    <!-- Left navigation links -->
+    <ul
+      class="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
+      data-twe-navbar-nav-ref>
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <!-- Dashboard link -->
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Dashboard</a
+        >
+      </li>
+      <!-- Team link -->
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Team</a
+        >
+      </li>
+      <!-- Projects link -->
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Projects</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right elements -->
+  <div class="relative flex items-center">
+    <!-- Cart Icon -->
+    <a
+      class="me-4 text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
+      href="#">
+      <span class="[&>svg]:w-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+        </svg>
+      </span>
+    </a>
+
+    <!-- Container with two dropdown menus -->
+    <div
+      class="relative"
+      data-twe-dropdown-ref
+      data-twe-dropdown-alignment="end">
+      <!-- First dropdown trigger -->
+      <a
+        class="me-4 flex items-center text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
+        href="#"
+        id="dropdownMenuButton1"
+        role="button"
+        data-twe-dropdown-toggle-ref
+        aria-expanded="false">
+        <!-- Dropdown trigger icon -->
+        <span class="[&>svg]:w-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              fill-rule="evenodd"
+              d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+        <!-- Notification counter -->
+        <span
+          class="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white"
+          >1</span
+        >
+      </a>
+      <!-- First dropdown menu -->
+      <ul
+        class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+        aria-labelledby="dropdownMenuButton1"
+        data-twe-dropdown-menu-ref>
+        <!-- First dropdown menu items -->
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Another action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Something else here</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Second dropdown container -->
+    <div
+      class="relative"
+      data-twe-dropdown-ref
+      data-twe-dropdown-alignment="end">
+      <!-- Second dropdown trigger -->
+      <a
+        class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+        href="#"
+        id="dropdownMenuButton2"
+        role="button"
+        data-twe-dropdown-toggle-ref
+        aria-expanded="false">
+        <!-- User avatar -->
+        <img
+          src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+          class="rounded-full"
+          style="height: 25px; width: 25px"
+          alt=""
+          loading="lazy" />
+      </a>
+      <!-- Second dropdown menu -->
+      <ul
+        class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+        aria-labelledby="dropdownMenuButton2"
+        data-twe-dropdown-menu-ref>
+        <!-- Second dropdown menu items -->
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Another action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Something else here</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="hidden w-full md:hidden md:w-auto" id="navbar-default">
+  <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <li>
+      <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Meet Trello.
+    </a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Solutions</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Sales</a>
+    </li>
+  </ul>
+</div>
+</nav>
    </header>
+
+   <header>
+    <nav class="bg-white border-gray-200 md:block lg:hidden">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Trello.</span>
+        </a>
+        <button id="Mobilebtn" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:hidden md:w-auto" id="navbar-defaults">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Meet Trello.
+            </a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Solutions</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Sales</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+   
    <main>
     <section class="md:grid md:grid-cols-[1fr_80%] container mx-auto max-w-ful px-2 my-10">
      <div class="p-2 hidden md:block">
-        <div class="border-b-2 border-slate-50">
+        <div class="border-b-2 border-slate-50 tabs">
             <div class="px-6 py-2 rounded-md bg-blue-200">
-               <span class="flex items-center gap-3"><ion-icon name="bar-chart-outline"></ion-icon>Boards</span>
+               <button data-tab="1" class="tab-button flex items-center gap-3"><ion-icon name="bar-chart-outline"></ion-icon>Boards</button>
             </div>
             <div class="px-6 py-2 rounded-md">
-               <span class="flex items-center gap-3"><ion-icon name="podium-outline"></ion-icon>Templates</span>
+               <button data-tab="2" class="tab-button flex items-center gap-3"><ion-icon name="podium-outline"></ion-icon>Templates</button>
             </div>
             <div class="px-6 py-2 rounded-md">
-               <span class="flex items-center gap-3"><ion-icon name="pulse-outline"></ion-icon>Home</span>
+               <button data-tab="3" class="tab-button flex items-center gap-3"><ion-icon name="pulse-outline"></ion-icon>Home</button>
             </div>
         </div>
         <p class="py-3 text-sm px-7">Workspaces</p>
@@ -69,106 +313,268 @@
         </div> -->
 
      </div>
-     <div class="px-4 md:px-8 py-6">
-      <h1 class="uppercase font-medium color">Your Workspaces</h1>
-      <p class="py-6">You aren't a member of any workspaces yet. <a href="#" class="text-blue-500">Create a workspace</a></p>
-      <!-- <div class="flex flex-col md:flex-row md:items-center md:justify-between md:gap-10">
-        <div>
-            <h1 class="flex items-center gap-3 text-xl md:text-base font-medium"><span class=""><ion-icon name="logo-apple-ar" class="bg-orange-500 p-2"></ion-icon></span>Akpesiri Build</h1>
+     <!-- section one -->
     
-        </div>
-         <div class="grid grid-cols-2 md:flex md:items-center md:justify-between gap-2 my-4">
-         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="bar-chart-outline"></ion-icon>Board</span>
-         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="grid-outline"></ion-icon>Views</span>
-         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="person-outline"></ion-icon>Member(1)</span>
-         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="cog-outline"></ion-icon>Settings</span>
-         <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="medkit-outline"></ion-icon>Upgrade</span>
-         </div>
-       
-      </div> -->
-      <!-- Pop up Modal -->
-
-
-<!-- Modal toggle -->
-<div id="modalBox" class="py-24 fixed top-0 bottom-0 right-0 left-0 backdrop-blur-lg mx-auto hidden">
-    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-      <div class="hidden lg:block lg:w-1/2 bg-cover" style="background-image:url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')"></div>
-      <div class="w-full p-8 lg:w-1/2">
-        <div class="flex items-center justify-end">
-            <button type="button" id="removeBtn" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
-                             <span class="absolute -inset-0.5"></span>
-                             <span class="sr-only">Close panel</span>
-                             <svg  class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                             </svg>
-             </button>
+         <!-- <div id="tab-1" class="px-4 md:px-8 py-6 tab-content hidden">
+          <h1 class="uppercase font-medium color">Your Workspaces</h1>
+          <p class="py-6">You aren't a member of any workspaces yet. <a href="#" class="text-blue-500">Create a workspace</a></p>
+           <div class="flex flex-col md:flex-row md:items-center md:justify-between md:gap-10">
+            <!-- <div>
+                <h1 class="flex items-center gap-3 text-xl md:text-base font-medium"><span class=""><ion-icon name="logo-apple-ar" class="bg-orange-500 p-2"></ion-icon></span>Akpesiri Build</h1>
+            </div>
+             <div class="grid grid-cols-2 md:flex md:items-center md:justify-between gap-2 my-4">
+             <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="bar-chart-outline"></ion-icon>Board</span>
+             <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="grid-outline"></ion-icon>Views</span>
+             <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="person-outline"></ion-icon>Member(1)</span>
+             <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="cog-outline"></ion-icon>Settings</span>
+             <span class="bg-slate-100 p-2 rounded-md flex items-center text-sm gap-2"><ion-icon name="medkit-outline"></ion-icon>Upgrade</span>
              </div>
-              <h2 class="text-2xl font-semibold text-gray-700 text-center">Let's build a Workspace</h2>
-              <p class="text-sm text-center text-gray-600  mb-2">Boost your productivity using trello.</p>
-              <!-- <a href="#" class="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100 g-signin2" data-onsuccess="onSignIn">
-                  <div class="px-4 py-3">
-                      <svg class="h-6 w-6" viewBox="0 0 40 40">
-                          <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107"/>
-                          <path d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z" fill="#FF3D00"/>
-                          <path d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z" fill="#4CAF50"/>
-                          <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2"/>
-                      </svg> 
-                  </div>
-                  <h1 class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
-                </a> -->
-                
-                <div class="g-signin2" data-onsuccess="onSignIn"
-                  data-client_id="475660581860-f34l5cr1mg8e7fjlp0r0ko7jjuk974db"  data-context="signin"
-                  data-ux_mode="popup"
-                  data-login_uri="http://localhost:5500"
-                  data-itp_support="true"
-                  data-type="standard"
-                  data-shape="rectangular"
-                  data-theme="outline"
-                  data-text="signin_with"
-                  data-size="large"
-                  data-logo_alignment="center"
-                  data-width="400px">
-                </div> 
-                <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-2 grid-cols-2">
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace name</label>
-                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
-                        </div>  
-        
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace type</label>
-                            <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full py-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Choose...</option>
-                                <option value="TV">Operations</option>
-                                <option value="PC">Engineering-IT</option>
-                                <option value="GA">Small Business</option>
-                                <option value="PH">Sales</option>
-                            </select>
-                        </div>
-                        <div class="col-span-2">
-                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
-                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Our team organizes everything here."></textarea>                    
-                        </div>
-                    </div>
-                    <button type="submit" class="text-white inline-flex w-full items-center justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                        Continue
-                    </button>
-                </form>
+          </div> -->
+<!--           
+    <div  class="bg-slate-100 w-1/2 md:w-1/4 h-24 rounded-sm cursor-pointer flex items-center justify-center md:flex ">
+        <p>Create new board</p>
+    </div> -->
+    
+    <div id="tab-content-container" class="">
+
+    </div>
+    
+    </div> 
+     <!-- Section two -->
+     <!-- <div id="tab-2" class="mx-auto container px-8 hidden tab-content">
+        <div class="lg:flex lg:items-center lg:justify-between gap-2">
+            <h1 class="text-xl font-bold">Featured categories</h1>
+            <input type="search" placeholder="Find Templates.." class="py-2 lg:px-3 lg:py-2 rounded border border-slate-300">
+        </div>
+        <div class="flex mt-5 items-center gap-2 overflow-x-auto scrollbar lg:overflow-hidden">
+           <div class="w-32 p-2">
+            <img src="./src/img/Business.svg" alt="backpack" class="">
+            <p class="text-center">Business</p>
+           </div>
+           <div class="w-32 p-2">
+            <img src="./src/img/code.svg" alt="backpack" class="">
+            <p class="text-center">Design</p>
+           </div>
+           <div class="w-32 p-2">
+            <img src="./src/img/Computer.svg" alt="backpack" class="">
+            <p class="text-center">Education</p>
+           </div>
+           <div class="w-32 p-2">
+            <img src="./src/img/backpack.svg" alt="backpack" class="">
+            <p class="text-center">Engineering</p>
+           </div>
+           <div class="w-32 p-2">
+            <img src="./src/img/marketing.svg" alt="backpack" class="">
+            <p class="text-center">Marketing</p>
+           </div>
+          
+           <div class="w-32 p-2">
+            <img src="./src/img/chating.svg" alt="backpack" class="">
+            <p class="text-center">Project</p>
+           </div>
+          
+           <div class="w-32 p-2">
+            <img src="./src/img/Remote Work.svg" alt="backpack" class="">
+            <p class="text-center">Remote work</p>
+           </div>
+        </div>
+        <div class="grid grid-cols-1 gap-3 lg:grid lg:grid-cols-3 mt-14 p-4">
+            <div
+            class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+            <a href="#!">
+              <img
+                class="rounded-t-lg"
+                src="./src/img/patrick-robert-doyle-r4PxPNSIzHw-unsplash.jpg"
+                alt="" />
+            </a>
+            <div class="p-6 text-surface dark:text-white">
+              <h5 class="mb-2 text-xl font-medium leading-tight">New Hire Onboarding</h5>
+              <p class="mb-4 text-base">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                data-twe-ripple-init
+                data-twe-ripple-color="light">
+                Button
+              </button>
+            </div>
+          </div>
+          <div
+  class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+  <a href="#!">
+    <img
+      class="rounded-t-lg"
+      src="./src/img/victor-rosario-vPC39ANNgm4-unsplash.jpg"
+      alt="" />
+  </a>
+  <div class="p-6 text-surface dark:text-white">
+    <h5 class="mb-2 text-xl font-medium leading-tight">Tier List</h5>
+    <p class="mb-4 text-base">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+    <button
+      type="button"
+      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+      data-twe-ripple-init
+      data-twe-ripple-color="light">
+      Button
+    </button>
+  </div>
+</div>
+<div
+  class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+  <a href="#!">
+    <img
+      class="rounded-t-lg"
+      src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+      alt="" />
+  </a>
+  <div class="p-6 text-surface dark:text-white">
+    <h5 class="mb-2 text-xl font-medium leading-tight">Better Work Habits Challenge</h5>
+    <p class="mb-4 text-base">
+      Some quick example text to build on the card title and make up the
+    </p>
+    <button
+      type="button"
+      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+      data-twe-ripple-init
+      data-twe-ripple-color="light">
+      Button
+    </button>
+  </div>
+</div>
+        </div>
+        <div class="grid grid-cols-1 gap-3 lg:grid lg:grid-cols-3 mt-14 p-4">
+            <div
+            class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+            <a href="#!">
+              <img
+                class="rounded-t-lg"
+                src="./src/img/patrick-robert-doyle-r4PxPNSIzHw-unsplash.jpg"
+                alt="" />
+            </a>
+            <div class="p-6 text-surface dark:text-white">
+              <h5 class="mb-2 text-xl font-medium leading-tight">New Hire Onboarding</h5>
+              <p class="mb-4 text-base">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                data-twe-ripple-init
+                data-twe-ripple-color="light">
+                Button
+              </button>
+            </div>
+          </div>
+          <div
+  class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+  <a href="#!">
+    <img
+      class="rounded-t-lg"
+      src="./src/img/victor-rosario-vPC39ANNgm4-unsplash.jpg"
+      alt="" />
+  </a>
+  <div class="p-6 text-surface dark:text-white">
+    <h5 class="mb-2 text-xl font-medium leading-tight">Tier List</h5>
+    <p class="mb-4 text-base">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+    <button
+      type="button"
+      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+      data-twe-ripple-init
+      data-twe-ripple-color="light">
+      Button
+    </button>
+  </div>
+</div>
+<div
+  class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+  <a href="#!">
+    <img
+      class="rounded-t-lg"
+      src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+      alt="" />
+  </a>
+  <div class="p-6 text-surface dark:text-white">
+    <h5 class="mb-2 text-xl font-medium leading-tight">Better Work Habits Challenge</h5>
+    <p class="mb-4 text-base">
+      Some quick example text to build on the card title and make up the
+    </p>
+    <button
+      type="button"
+      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+      data-twe-ripple-init
+      data-twe-ripple-color="light">
+      Button
+    </button>
+  </div>
+</div>
+        </div>
+     </div>  -->
+
+     <!-- <div id="tab-3" class="card w-96 bg-base-100 shadow-xl hidden tab-content">
+        <figure><img class="" src="./src/img/patrick-robert-doyle-r4PxPNSIzHw-unsplash.jpg" alt="" /></figure>
+        <div class="card-body p-2">
+          <h2 class="card-title text-center font-bold text-xl">Organize everything</h2>
+          <p class="text-sm text-center">Put everything in one place and start moving things forward with your first Trello board!</p>
+          <div class="card-actions justify-end py-4">
+            <input type="search" name="" id="" class="border border-slate-400 px-2 py-2 w-full" placeholder="what are you working on?">
+          </div>
+        </div>
+      </div> -->
+</section>
+
+  <div id="modalContainer" class="fixed top-0 bottom-0 left-0 right-0 z-[1000] hidden">
+      <div class="flex flex-col items-center justify-center px-6 py-8 mt-56 md:mt-1 lg:mt-1 md:h-screen lg:py-0">
+          <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+              <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        Let's Build your Workspaces
+                    </h1>
+                    <button class="btn--close-modal bg-black text-white p-1">&times;</button>
+                </div>
+                  <form id="form-space" class="space-y-4 md:space-y-6">
+                      <div>
+                          <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace name</label>
+                          <input type="text" id="TextValue" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Taco's Co.">
+                      </div>
+                      <div>
+                          <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Workspace type</label>
+                          <select class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="" id="">
+                              <option value="">choose</option>
+                              <option value="">Business</option>
+                              <option value="">Engineering</option>
+                              <option value="">Health</option>
+                              <option value="">IT/banking</option>
+                              <option value="">Trade</option>
+                          </select>
+                      </div>
+                   
+                      <button id="submit" class="w-full flex items-center justify-center gap-3 text-white bg-red-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                         Continue</button>
+                         <!-- <a href="./workspace.html" class="w-full flex items-center justify-center gap-3 text-white bg-blue-500 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Continue</a> -->
+
+                      <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                          Don’t have an account yet? <a href="./sign-up.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500 text-blue-600">Sign up</a>
+                      </p>
+                  </form>
+              </div>
           </div>
       </div>
   </div>
-
-      <div  class="bg-slate-100 w-1/2 md:w-1/4 h-24 rounded-sm cursor-pointer flex items-center justify-center md:flex ">
-        <p>Create new board</p>
-     </div>
-     </div>
-    </section>
-   </main>
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <div id="overlay" class="fixed h-screen top-0 bottom-0 left-0 right-0 z-[100] backdrop-blur-lg hidden"></div>
+</main>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script type="module" src="./components.js"></script>
+<script src="./components.js"></script>
 </body>
 </html>

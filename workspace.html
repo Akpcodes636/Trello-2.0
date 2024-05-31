@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspaces</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="background-img">
+    <header>
+        <!-- Main navigation container  -->
+<div class="lg:flex hidden w-full lg:flex-wrap lg:items-center lg:justify-between px-3 py-4">
+  <!-- Hamburger button for mobile view -->
+  <button
+    class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+    type="button"
+    data-twe-collapse-init
+    data-twe-target="#navbarSupportedContent12"
+    aria-controls="navbarSupportedContent12"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <!-- Hamburger icon -->
+    <span
+      class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor">
+        <path
+          fill-rule="evenodd"
+          d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+          clip-rule="evenodd" />
+      </svg>
+    </span>
+  </button>
+
+  <!-- Collapsible navigation container -->
+  <div
+    class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+    id="navbarSupportedContent12"
+    data-twe-collapse-item>
+    <!-- Logo -->
+    <a
+      class="mb-4 me-5 ms-2 mt-3 flex items-center lg:mb-0 lg:mt-0"
+      href="#">
+      <img
+        src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
+        style="height: 15px"
+        alt="TE Logo"
+        loading="lazy" />
+    </a>
+    <!-- Left navigation links -->
+    <ul
+      class="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
+      data-twe-navbar-nav-ref>
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <!-- Dashboard link -->
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Dashboard</a
+        >
+      </li>
+      <!-- Team link -->
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Team</a
+        >
+      </li>
+      <!-- Projects link -->
+      <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+        <a
+          class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+          href="#"
+          data-twe-nav-link-ref
+          >Projects</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right elements -->
+  <div class="relative flex items-center">
+    <!-- Cart Icon -->
+    <a
+      class="me-4 text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
+      href="#">
+      <span class="[&>svg]:w-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+        </svg>
+      </span>
+    </a>
+
+    <!-- Container with two dropdown menus -->
+    <div
+      class="relative"
+      data-twe-dropdown-ref
+      data-twe-dropdown-alignment="end">
+      <!-- First dropdown trigger -->
+      <a
+        class="me-4 flex items-center text-secondary-500 transition duration-200 hover:text-secondary-600/70 hover:ease-in-out focus:text-secondary-600/70 active:text-secondary-600/70 motion-reduce:transition-none dark:text-secondary-500 dark:hover:text-secondary-500/80 dark:focus:text-secondary-500/80 dark:active:text-secondary-500/80"
+        href="#"
+        id="dropdownMenuButton1"
+        role="button"
+        data-twe-dropdown-toggle-ref
+        aria-expanded="false">
+        <!-- Dropdown trigger icon -->
+        <span class="[&>svg]:w-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              fill-rule="evenodd"
+              d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+        <!-- Notification counter -->
+        <span
+          class="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white"
+          >1</span
+        >
+      </a>
+      <!-- First dropdown menu -->
+      <ul
+        class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+        aria-labelledby="dropdownMenuButton1"
+        data-twe-dropdown-menu-ref>
+        <!-- First dropdown menu items -->
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Another action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Something else here</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Second dropdown container -->
+    <div
+      class="relative"
+      data-twe-dropdown-ref
+      data-twe-dropdown-alignment="end">
+      <!-- Second dropdown trigger -->
+      <a
+        class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+        href="#"
+        id="dropdownMenuButton2"
+        role="button"
+        data-twe-dropdown-toggle-ref
+        aria-expanded="false">
+        <!-- User avatar -->
+        <img
+          src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+          class="rounded-full"
+          style="height: 25px; width: 25px"
+          alt=""
+          loading="lazy" />
+      </a>
+      <!-- Second dropdown menu -->
+      <ul
+        class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+        aria-labelledby="dropdownMenuButton2"
+        data-twe-dropdown-menu-ref>
+        <!-- Second dropdown menu items -->
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Another action</a
+          >
+        </li>
+        <li>
+          <a
+            class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+            href="#"
+            data-twe-dropdown-item-ref
+            >Something else here</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </header>
+  
+    <header>
+      <nav class="bg-white border-gray-200 md:block lg:hidden">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Trello.</span>
+          </a>
+          <button id="Mobilebtns" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:hidden md:w-auto" id="navbar-defaultss">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Meet Trello.
+              </a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Solutions</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Sales</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!-- component -->
+<main>
+
+    <div class="container px-8 py-6">
+        <h1 class="text-2xl welcome welcome-message">Welcome Akpesiri👋</h1>
+    </div>
+     
+     <!-- <div class="flex items-center justify-start container py-2 px-6 gap-12 h-full overflow-scroll">
+     <div class="swim-lane flex flex-col gap-4 background-color p-6 rounded-md" id="todo-lane"> 
+       <h3 class="text-2xl font-bold">TODO<button><ion-icon id="todoBtn" name="create-outline"></ion-icon></button></h3>
+       
+     </div>
+     <div class="swim-lane flex flex-col gap-4 background-color p-12 rounded-md" id="Doing-lane">
+       <h3 class="text-2xl font-bold">Doing</h3>
+        
+     </div>
+     <div class="swim-lane flex flex-col gap-4 background-color p-12 rounded-md" id="done-lane">
+       <h3 class="text-2xl font-bold">Done</h3>
+        
+     </div>
+    </div> -->
+
+     <div class="board">
+      <form id="todo-form">
+        <input type="text" placeholder="New TODO..." id="todo-input" />
+        <button type="submit">Add +</button>
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">TODO</h3>
+
+          <!-- <p class="task" draggable="true">Get groceries</p>
+          <p class="task" draggable="true">Feed the dogs</p>
+          <p class="task" draggable="true">Mow the lawn</p>  -->
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Doing</h3>
+
+           <!-- <p class="task" draggable="true">Binge 80 hours of Game of Thrones</p> -->
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Done</h3>
+
+           <!-- <p class="task" draggable="true">
+            Watch video of a man raising a grocery store lobster as a pet
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+
+</main>
+<!-- Modal section -->
+<div id="modalContainer" class="mt-52 lg:mt-1 fixed top-0 bottom-0 left-0 right-0 z-[1000] hidden">
+  <div class="lg:flex flex-col lg:items-center lg:justify-center px-24 py-8 mx-auto md:h-screen lg:py-0">
+      <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <div class="flex items-center justify-between">
+                <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl dark:text-white">
+                    Create a New..
+                </h1>
+                <button id="btn--close-modal" class=" bg-black text-white p-1">&times;</button>
+            </div>
+              <form id="todo-form" class="space-y-4 md:space-y-6">
+                  <textarea id="textValue" name="" row="3" class="block border border-blue-500 p-2.5 w-full text-sm text-gray-400  rounded-lg" placeholder="Add your to do List"></textarea>
+               
+                  <button id="ContinueBtn" type="submit" class="w-full flex items-center justify-center gap-3 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="./workspace.html"><svg id="loader" class="hidden animate-spin h-3 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                      </path>
+                    </svg><span id="btn-text">Add To Do</span></a></button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="overlay" class="fixed h-screen top-0 bottom-0 left-0 right-0 z-[100] backdrop-blur-lg hidden"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./workspace.js"></script>
+</body>
+</html>
